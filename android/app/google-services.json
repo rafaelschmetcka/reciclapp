@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "310245863587",
+    "project_id": "reciclapp-451a4",
+    "storage_bucket": "reciclapp-451a4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310245863587:android:6eb815b752602efb7ecf16",
+        "android_client_info": {
+          "package_name": "com.mycompany.reciclapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310245863587-63dh9ctunal8qd5l1umcrfqd8bmgugvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK1sgDa0prOlendRJ8uFnuDNM9cXUdn68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310245863587-63dh9ctunal8qd5l1umcrfqd8bmgugvl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "310245863587-4k1uqleo5qicl6sst8mccfue57j3gphq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.reciclapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
