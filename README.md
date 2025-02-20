@@ -1,6 +1,7 @@
 # Reciclapp
 
-O Reciclapp é um aplicativo desenvolvido com FlutterFlow e Supabase para facilitar o processo de reciclagem, conectando usuários que desejam descartar materiais devidamente reciclados com coletores que podem coletá-los.
+O **Reciclapp** é um aplicativo desenvolvido como parte do projeto de *Technological Craftsmanship Works* na **Universidade Tecnológica Federal do Paraná - UTFPR**. O objetivo da aplicação é facilitar o processo de reciclagem, conectando usuários que desejam descartar materiais devidamente reciclados com coletores que podem coletá-los.
+
 
 ## Funcionalidades
 
@@ -104,7 +105,7 @@ _________________
     - `avaliacao_coletor (int2)` - Pontos atribuídos ao usuário.
     - `status (text)` - Staus da coleta, pode ser "Criada", "Em Andamento" ou "Finalizada".
     - `avaliacao_usuario (int2)` - Pontos atribuídos ao coletor (beta)
-    
+
 ## Tabela `Historico`
 
 - **Campos principais:**
@@ -123,13 +124,51 @@ _________________
 - Supabase como backend, banco de dados e autenticação.
 - Dart como linguagem principal no FlutterFlow.
 
-## Instalação
+## Instalaçãi
 
 - Clone este repositório do GitHub.
 - Configure o Supabase com políticas de acesso e as tabelas mencionadas.
 - Importe o projeto no FlutterFlow.
 - Faça o deploy do aplicativo para testes e conexão da base via API.
 
+## Instruções para Instalar o Projeto
+
+Este projeto foi criado no **FlutterFlow** e pode ser rodado no **Android Studio**. 
+Para começar, siga os passos abaixo.
+
+## Pré-requisitos
+
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Android Studio](https://developer.android.com/studio) (com plugins Flutter e Dart instalados)
+- [Git](https://git-scm.com/)
+
+### 1. **Clone o Repositório**
+
+Primeiro, você precisa clonar o repositório para a sua máquina. No terminal, execute o comando:
+
+```bash
+git clone https://github.com/rafaelschmetcka/reciclapp.git
+```
+
+### 2. **Abra o Projeto no Android Studio**
+
+Após clonar o repositório, abra o Android Studio.
+
+File > Open > Selecione a pasta do projeto.
+
+### 3. **Instale Dependências**
+
+```bash
+flutter pub get
+```
+
+Isso irá baixar todas as dependências do Flutter e preparar o projeto para ser executado.
+
+### 4. **Executar o Aplicativo**
+
+Conecte um dispositivo Android ou inicie um emulador (AVD Manager).
+
+Selecione o dispositivo no menu superior direito do Android Studio.
 ## Licença
 
 [MIT](https://choosealicense.com/licenses/mit/)
