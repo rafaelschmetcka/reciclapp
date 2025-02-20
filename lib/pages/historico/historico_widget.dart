@@ -13,6 +13,9 @@ export 'historico_model.dart';
 class HistoricoWidget extends StatefulWidget {
   const HistoricoWidget({super.key});
 
+  static String routeName = 'historico';
+  static String routePath = '/historico';
+
   @override
   State<HistoricoWidget> createState() => _HistoricoWidgetState();
 }
@@ -58,11 +61,11 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                   gradient: LinearGradient(
                     colors: [
                       FlutterFlowTheme.of(context).primary,
-                      const Color(0xFFF9CF58)
+                      Color(0xFFF9CF58)
                     ],
-                    stops: const [0.0, 1.0],
-                    begin: const AlignmentDirectional(0.0, -1.0),
-                    end: const AlignmentDirectional(0, 1.0),
+                    stops: [0.0, 1.0],
+                    begin: AlignmentDirectional(0.0, -1.0),
+                    end: AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Column(
@@ -70,13 +73,13 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -91,7 +94,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 8.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
@@ -114,9 +117,9 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                     Container(
                       width: 900.0,
                       height: 667.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             15.0, 80.0, 15.0, 0.0),
                         child: SingleChildScrollView(
                           primary: false,
@@ -129,7 +132,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 1.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -142,10 +145,10 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
@@ -167,7 +170,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                               Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: MediaQuery.sizeOf(context).height * 0.6,
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: FutureBuilder<List<HistoricoRow>>(
                                   future: (_model.requestCompleter ??=
                                           Completer<List<HistoricoRow>>()
@@ -209,7 +212,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                                       itemCount:
                                           listViewHistoricoRowList.length,
                                       separatorBuilder: (_, __) =>
-                                          const SizedBox(height: 8.0),
+                                          SizedBox(height: 8.0),
                                       itemBuilder: (context, listViewIndex) {
                                         final listViewHistoricoRow =
                                             listViewHistoricoRowList[
@@ -218,13 +221,13 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                                           width: 100.0,
                                           height: 65.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0x79E0E3E7),
+                                            color: Color(0x79E0E3E7),
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 0.0, 8.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -233,7 +236,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                                               children: [
                                                 Container(
                                                   height: 100.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -445,7 +448,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                                                     );
                                                   },
                                                 ),
-                                              ].divide(const SizedBox(width: 15.0)),
+                                              ].divide(SizedBox(width: 15.0)),
                                             ),
                                           ),
                                         );
@@ -454,7 +457,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
                                   },
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 8.0)),
+                            ].divide(SizedBox(height: 8.0)),
                           ),
                         ),
                       ),
@@ -466,7 +469,7 @@ class _HistoricoWidgetState extends State<HistoricoWidget> {
             wrapWithModel(
               model: _model.navBarModel,
               updateCallback: () => safeSetState(() {}),
-              child: const NavBarWidget(
+              child: NavBarWidget(
                 ativacao: 0,
               ),
             ),

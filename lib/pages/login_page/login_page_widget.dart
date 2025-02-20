@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'login_page_model.dart';
@@ -12,6 +13,9 @@ export 'login_page_model.dart';
 
 class LoginPageWidget extends StatefulWidget {
   const LoginPageWidget({super.key});
+
+  static String routeName = 'loginPage';
+  static String routePath = '/loginPage';
 
   @override
   State<LoginPageWidget> createState() => _LoginPageWidgetState();
@@ -44,6 +48,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
 
     _model.cadEmailTextController ??= TextEditingController();
     _model.cadEmailFocusNode ??= FocusNode();
+
+    _model.cadCpfTextController ??= TextEditingController();
+    _model.cadCpfFocusNode ??= FocusNode();
 
     _model.cadPasswordTextController ??= TextEditingController();
     _model.cadPasswordFocusNode ??= FocusNode();
@@ -78,10 +85,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
           height: double.infinity,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [const Color(0xFF4B986C), FlutterFlowTheme.of(context).warning],
-              stops: const [0.0, 1.0],
-              begin: const AlignmentDirectional(0.0, -1.0),
-              end: const AlignmentDirectional(0, 1.0),
+              colors: [Color(0xFF4B986C), FlutterFlowTheme.of(context).warning],
+              stops: [0.0, 1.0],
+              begin: AlignmentDirectional(0.0, -1.0),
+              end: AlignmentDirectional(0, 1.0),
             ),
           ),
           child: Column(
@@ -91,7 +98,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
             children: [
               Container(
                 width: 700.0,
-                decoration: const BoxDecoration(),
+                decoration: BoxDecoration(),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -110,14 +117,14 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 520.0,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 650.0,
                   ),
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0x1AFFFFFF),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(15.0),
@@ -134,10 +141,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                         child: Column(
                           children: [
                             Align(
-                              alignment: const Alignment(0.0, 0),
+                              alignment: Alignment(0.0, 0),
                               child: TabBar(
                                 labelColor: Colors.black,
-                                unselectedLabelColor: const Color(0xFF7A8A96),
+                                unselectedLabelColor: Color(0xFF7A8A96),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .titleMedium
                                     .override(
@@ -151,7 +158,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                           fontFamily: 'Inter Tight',
                                           letterSpacing: 0.0,
                                         ),
-                                indicatorColor: const Color(0xFF4B986C),
+                                indicatorColor: Color(0xFF4B986C),
                                 tabs: [
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
@@ -175,17 +182,17 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                 controller: _model.tabBarController,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 50.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Container(
                                           width: double.infinity,
-                                          constraints: const BoxConstraints(
+                                          constraints: BoxConstraints(
                                             maxWidth: 500.0,
                                           ),
-                                          decoration: const BoxDecoration(
+                                          decoration: BoxDecoration(
                                             borderRadius: BorderRadius.only(
                                               bottomLeft: Radius.circular(15.0),
                                               bottomRight:
@@ -196,7 +203,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 10.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -261,13 +268,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         20.0,
                                                                         0.0,
                                                                         0.0),
-                                                            child: SizedBox(
+                                                            child: Container(
                                                               width: double
                                                                   .infinity,
                                                               child:
@@ -294,7 +301,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Inter',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF182635),
                                                                         letterSpacing:
                                                                             0.0,
@@ -310,7 +317,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Inter',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0x80182635),
                                                                         letterSpacing:
                                                                             0.0,
@@ -320,7 +327,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   enabledBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFF041E31),
                                                                       width:
@@ -333,7 +340,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   focusedBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0x00000000),
                                                                       width:
@@ -379,7 +386,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF02090F),
                                                                       letterSpacing:
                                                                           0.0,
@@ -398,7 +405,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                          SizedBox(
+                                                          Container(
                                                             width:
                                                                 double.infinity,
                                                             child:
@@ -425,7 +432,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -442,7 +449,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0x80182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -453,7 +460,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0xFF041E31),
                                                                     width: 1.0,
@@ -466,7 +473,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 focusedBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0x00000000),
                                                                     width: 1.0,
@@ -523,7 +530,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                             .visibility_outlined
                                                                         : Icons
                                                                             .visibility_off_outlined,
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0x80182635),
                                                                     size: 25.0,
                                                                   ),
@@ -535,7 +542,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   .override(
                                                                     fontFamily:
                                                                         'Inter',
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0xFF14181C),
                                                                     letterSpacing:
                                                                         0.0,
@@ -570,7 +577,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF101215),
                                                                       letterSpacing:
                                                                           0.0,
@@ -581,14 +588,14 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 12.0)),
                                                       ),
                                                     ],
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 20.0, 0.0, 30.0),
                                                   child: FutureBuilder<
@@ -654,7 +661,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                           }
 
                                                           context.goNamedAuth(
-                                                              'redirectPage',
+                                                              RedirectPageWidget
+                                                                  .routeName,
                                                               context.mounted);
                                                         },
                                                         text:
@@ -668,21 +676,21 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                           width: 250.0,
                                                           height: 40.0,
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       0.0,
                                                                       16.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
                                                                       0.0,
                                                                       0.0),
                                                           color:
-                                                              const Color(0xFF4B986C),
+                                                              Color(0xFF4B986C),
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -713,17 +721,17 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 30.0, 0.0, 0.0),
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 20.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Container(
                                           width: double.infinity,
-                                          constraints: const BoxConstraints(
+                                          constraints: BoxConstraints(
                                             maxWidth: 500.0,
                                           ),
-                                          decoration: const BoxDecoration(
+                                          decoration: BoxDecoration(
                                             borderRadius: BorderRadius.only(
                                               bottomLeft: Radius.circular(15.0),
                                               bottomRight:
@@ -734,7 +742,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 10.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -752,7 +760,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     8.0,
@@ -785,7 +793,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                         mainAxisSize:
                                                             MainAxisSize.max,
                                                         children: [
-                                                          SizedBox(
+                                                          Container(
                                                             width:
                                                                 double.infinity,
                                                             child:
@@ -812,7 +820,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -829,7 +837,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0x80182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -840,7 +848,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0xFF041E31),
                                                                     width: 1.0,
@@ -853,7 +861,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 focusedBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0x00000000),
                                                                     width: 1.0,
@@ -899,7 +907,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   .override(
                                                                     fontFamily:
                                                                         'Inter',
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0xFF02090F),
                                                                     letterSpacing:
                                                                         0.0,
@@ -914,7 +922,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                       context),
                                                             ),
                                                           ),
-                                                          SizedBox(
+                                                          Container(
                                                             width:
                                                                 double.infinity,
                                                             child:
@@ -941,7 +949,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -958,7 +966,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0x80182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -969,7 +977,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0xFF041E31),
                                                                     width: 1.0,
@@ -982,7 +990,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 focusedBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0x00000000),
                                                                     width: 1.0,
@@ -1028,7 +1036,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   .override(
                                                                     fontFamily:
                                                                         'Inter',
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0xFF02090F),
                                                                     letterSpacing:
                                                                         0.0,
@@ -1046,7 +1054,143 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                       context),
                                                             ),
                                                           ),
-                                                          SizedBox(
+                                                          Container(
+                                                            width:
+                                                                double.infinity,
+                                                            child:
+                                                                TextFormField(
+                                                              controller: _model
+                                                                  .cadCpfTextController,
+                                                              focusNode: _model
+                                                                  .cadCpfFocusNode,
+                                                              autofocus: false,
+                                                              obscureText:
+                                                                  false,
+                                                              decoration:
+                                                                  InputDecoration(
+                                                                isDense: true,
+                                                                labelText:
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  'q1cuec24' /* CPF */,
+                                                                ),
+                                                                labelStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Inter',
+                                                                      color: Color(
+                                                                          0xFF182635),
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                    ),
+                                                                hintText:
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  '1qyg7nyo' /* Digite Seu CPF */,
+                                                                ),
+                                                                hintStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Inter',
+                                                                      color: Color(
+                                                                          0x80182635),
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w500,
+                                                                    ),
+                                                                enabledBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0xFF041E31),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                ),
+                                                                focusedBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: Color(
+                                                                        0x00000000),
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                ),
+                                                                errorBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .error,
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                ),
+                                                                focusedErrorBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .error,
+                                                                    width: 1.0,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                ),
+                                                                filled: true,
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Inter',
+                                                                    color: Color(
+                                                                        0xFF02090F),
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                  ),
+                                                              keyboardType:
+                                                                  TextInputType
+                                                                      .number,
+                                                              cursorColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                              validator: _model
+                                                                  .cadCpfTextControllerValidator
+                                                                  .asValidator(
+                                                                      context),
+                                                              inputFormatters: [
+                                                                _model
+                                                                    .cadCpfMask
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          Container(
                                                             width:
                                                                 double.infinity,
                                                             child:
@@ -1073,7 +1217,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -1090,7 +1234,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0x80182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -1101,7 +1245,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0xFF041E31),
                                                                     width: 1.0,
@@ -1114,7 +1258,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 focusedBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0x00000000),
                                                                     width: 1.0,
@@ -1171,7 +1315,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                             .visibility_outlined
                                                                         : Icons
                                                                             .visibility_off_outlined,
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0x80182635),
                                                                     size: 25.0,
                                                                   ),
@@ -1183,7 +1327,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   .override(
                                                                     fontFamily:
                                                                         'Inter',
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0xFF14181C),
                                                                     letterSpacing:
                                                                         0.0,
@@ -1198,7 +1342,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                       context),
                                                             ),
                                                           ),
-                                                          SizedBox(
+                                                          Container(
                                                             width:
                                                                 double.infinity,
                                                             child:
@@ -1225,7 +1369,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -1242,7 +1386,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0x80182635),
                                                                       letterSpacing:
                                                                           0.0,
@@ -1253,7 +1397,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0xFF041E31),
                                                                     width: 1.0,
@@ -1266,7 +1410,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 focusedBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0x00000000),
                                                                     width: 1.0,
@@ -1323,7 +1467,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                             .visibility_outlined
                                                                         : Icons
                                                                             .visibility_off_outlined,
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0x80182635),
                                                                     size: 25.0,
                                                                   ),
@@ -1335,7 +1479,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   .override(
                                                                     fontFamily:
                                                                         'Inter',
-                                                                    color: const Color(
+                                                                    color: Color(
                                                                         0xFF02090F),
                                                                     letterSpacing:
                                                                         0.0,
@@ -1385,7 +1529,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Inter',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF02090F),
                                                                       letterSpacing:
                                                                           0.0,
@@ -1398,7 +1542,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
  */
                                                               ,
                                                             ),
-                                                            icon: const Icon(
+                                                            icon: Icon(
                                                               Icons
                                                                   .keyboard_arrow_down_rounded,
                                                               color: Color(
@@ -1406,12 +1550,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                               size: 24.0,
                                                             ),
                                                             elevation: 2.0,
-                                                            borderColor: const Color(
+                                                            borderColor: Color(
                                                                 0xFF041E31),
                                                             borderWidth: 0.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         0.0,
@@ -1424,16 +1568,16 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                             isMultiSelect:
                                                                 false,
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 12.0)),
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       25.0,
@@ -1443,7 +1587,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                             onPressed:
                                                                 () async {
                                                               Function()
-                                                                  navigate =
+                                                                  _navigate =
                                                                   () {};
                                                               if (_model.formKey2
                                                                           .currentState ==
@@ -1477,7 +1621,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   ScaffoldMessenger.of(
                                                                           context)
                                                                       .showSnackBar(
-                                                                    const SnackBar(
+                                                                    SnackBar(
                                                                       content:
                                                                           Text(
                                                                         'Passwords don\'t match!',
@@ -1503,9 +1647,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                   return;
                                                                 }
 
-                                                                navigate = () =>
+                                                                _navigate = () =>
                                                                     context.goNamedAuth(
-                                                                        'redirectPage',
+                                                                        RedirectPageWidget
+                                                                            .routeName,
                                                                         context
                                                                             .mounted);
                                                                 await UsuariosTable()
@@ -1525,6 +1670,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                       : (FFAppState()
                                                                               .tipousuario ==
                                                                           false),
+                                                                  'cpf': _model
+                                                                      .cadCpfTextController
+                                                                      .text,
                                                                 });
                                                               } else {
                                                                 ScaffoldMessenger.of(
@@ -1540,7 +1688,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                             .primaryText,
                                                                       ),
                                                                     ),
-                                                                    duration: const Duration(
+                                                                    duration: Duration(
                                                                         milliseconds:
                                                                             4000),
                                                                     backgroundColor:
@@ -1550,7 +1698,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                                 );
                                                               }
 
-                                                              navigate();
+                                                              _navigate();
                                                             },
                                                             text: FFLocalizations
                                                                     .of(context)
@@ -1562,20 +1710,20 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                               width: 250.0,
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                              color: const Color(
+                                                              color: Color(
                                                                   0xFF4B986C),
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
@@ -1600,7 +1748,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -1614,7 +1762,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Inter',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181C),
                                                                 letterSpacing:
                                                                     0.0,
@@ -1622,7 +1770,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 12.0)),
+                                                        SizedBox(height: 12.0)),
                                                   ),
                                                 ),
                                               ],

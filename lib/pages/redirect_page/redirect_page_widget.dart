@@ -2,6 +2,7 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +11,9 @@ export 'redirect_page_model.dart';
 
 class RedirectPageWidget extends StatefulWidget {
   const RedirectPageWidget({super.key});
+
+  static String routeName = 'redirectPage';
+  static String routePath = '/redirectPage';
 
   @override
   State<RedirectPageWidget> createState() => _RedirectPageWidgetState();
@@ -37,10 +41,10 @@ class _RedirectPageWidgetState extends State<RedirectPageWidget> {
       FFAppState().tipousuario = _model.tipoUserkj!.firstOrNull!.tipoUsuario!;
       safeSetState(() {});
       if (FFAppState().tipousuario == true) {
-        context.pushNamed('homePage');
+        context.pushNamed(HomePageWidget.routeName);
       } else {
         context.pushNamed(
-          'homePageColetor',
+          HomePageColetorWidget.routeName,
           queryParameters: {
             'tabIndex': serializeParam(
               0,
@@ -81,9 +85,9 @@ class _RedirectPageWidgetState extends State<RedirectPageWidget> {
                 FlutterFlowTheme.of(context).primary,
                 FlutterFlowTheme.of(context).warning
               ],
-              stops: const [0.0, 1.0],
-              begin: const AlignmentDirectional(0.0, -1.0),
-              end: const AlignmentDirectional(0, 1.0),
+              stops: [0.0, 1.0],
+              begin: AlignmentDirectional(0.0, -1.0),
+              end: AlignmentDirectional(0, 1.0),
             ),
           ),
         ),

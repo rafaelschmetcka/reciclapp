@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'adicionar_coleta_model.dart';
 export 'adicionar_coleta_model.dart';
@@ -44,17 +45,17 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
     return Container(
       width: double.infinity,
       height: 500.0,
-      constraints: const BoxConstraints(
+      constraints: BoxConstraints(
         maxWidth: 600.0,
       ),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [const Color(0xFFF9CF58), FlutterFlowTheme.of(context).secondary],
-          stops: const [0.0, 1.0],
-          begin: const AlignmentDirectional(0.0, -1.0),
-          end: const AlignmentDirectional(0, 1.0),
+          colors: [Color(0xFFF9CF58), FlutterFlowTheme.of(context).secondary],
+          stops: [0.0, 1.0],
+          begin: AlignmentDirectional(0.0, -1.0),
+          end: AlignmentDirectional(0, 1.0),
         ),
-        borderRadius: const BorderRadius.only(
+        borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(20.0),
@@ -62,7 +63,7 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+        padding: EdgeInsets.all(25.0),
         child: FutureBuilder<List<UsuariosRow>>(
           future: UsuariosTable().querySingleRow(
             queryFn: (q) => q.eqOrNull(
@@ -97,7 +98,7 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                 Container(
                   width: 100.0,
                   height: 10.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0xEA393FEF),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20.0),
@@ -121,15 +122,15 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                 Container(
                   width: double.infinity,
                   height: 144.0,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 500.0,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0x748B82DB),
+                    color: Color(0x748B82DB),
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: FlutterFlowCalendar(
-                    color: const Color(0xD94B39EF),
+                    color: Color(0xD94B39EF),
                     weekFormat: true,
                     weekStartsMonday: false,
                     rowHeight: 64.0,
@@ -167,7 +168,7 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       if (!((columnUsuariosRow?.cep != null &&
@@ -185,21 +186,21 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                           context: context,
                           builder: (alertDialogContext) {
                             return AlertDialog(
-                              title: const Text('Por favor, preencha o endereço!'),
-                              content: const Text(
+                              title: Text('Por favor, preencha o endereço!'),
+                              content: Text(
                                   'Antes de solicitar uma coleta preencha o endereço completo no seu perfil.'),
                               actions: [
                                 TextButton(
                                   onPressed: () =>
                                       Navigator.pop(alertDialogContext),
-                                  child: const Text('Ok'),
+                                  child: Text('Ok'),
                                 ),
                               ],
                             );
                           },
                         );
 
-                        context.pushNamed('profilePage');
+                        context.pushNamed(ProfilePageWidget.routeName);
 
                         return;
                       }
@@ -207,7 +208,7 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                             context: context,
                             builder: (alertDialogContext) {
                               return AlertDialog(
-                                title: const Text(
+                                title: Text(
                                     'Confirmação de Solicitação de Coleta'),
                                 content: Text(
                                     'Deseja realmente solicitar uma coleta para o dia: ${dateTimeFormat(
@@ -220,12 +221,12 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                                   TextButton(
                                     onPressed: () => Navigator.pop(
                                         alertDialogContext, false),
-                                    child: const Text('Cancelar'),
+                                    child: Text('Cancelar'),
                                   ),
                                   TextButton(
                                     onPressed: () =>
                                         Navigator.pop(alertDialogContext, true),
-                                    child: const Text('Confirmar'),
+                                    child: Text('Confirmar'),
                                   ),
                                 ],
                               );
@@ -248,7 +249,7 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                         return;
                       }
 
-                      context.pushNamed('homePage');
+                      context.pushNamed(HomePageWidget.routeName);
 
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
@@ -267,7 +268,7 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                          duration: const Duration(milliseconds: 4000),
+                          duration: Duration(milliseconds: 4000),
                           backgroundColor:
                               FlutterFlowTheme.of(context).secondary,
                         ),
@@ -280,10 +281,10 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                       width: double.infinity,
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0xD94B39EF),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: Color(0xD94B39EF),
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Inter Tight',
@@ -320,7 +321,7 @@ class _AdicionarColetaWidgetState extends State<AdicionarColetaWidget> {
                       ),
                   ],
                 ),
-              ].divide(const SizedBox(height: 16.0)),
+              ].divide(SizedBox(height: 16.0)),
             );
           },
         ),

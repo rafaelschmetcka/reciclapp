@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'home_page_coletor_model.dart';
@@ -20,6 +21,9 @@ class HomePageColetorWidget extends StatefulWidget {
   });
 
   final int? tabIndex;
+
+  static String routeName = 'homePageColetor';
+  static String routePath = '/homePageColetor';
 
   @override
   State<HomePageColetorWidget> createState() => _HomePageColetorWidgetState();
@@ -77,11 +81,11 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                   gradient: LinearGradient(
                     colors: [
                       FlutterFlowTheme.of(context).primary,
-                      const Color(0xFFF9CF58)
+                      Color(0xFFF9CF58)
                     ],
-                    stops: const [0.0, 1.0],
-                    begin: const AlignmentDirectional(0.0, -1.0),
-                    end: const AlignmentDirectional(0, 1.0),
+                    stops: [0.0, 1.0],
+                    begin: AlignmentDirectional(0.0, -1.0),
+                    end: AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Column(
@@ -89,13 +93,13 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -110,7 +114,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 8.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
@@ -123,7 +127,8 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                 size: 24.0,
                               ),
                               onPressed: () async {
-                                context.goNamed('historicoColetor');
+                                context
+                                    .goNamed(HistoricoColetorWidget.routeName);
                               },
                             ),
                           ),
@@ -133,12 +138,12 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                     Container(
                       width: 900.0,
                       height: 667.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -147,7 +152,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 0.0, 0.0),
                                     child: FutureBuilder<List<UsuariosRow>>(
                                       future: UsuariosTable().querySingleRow(
@@ -200,7 +205,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'p6y7xnll' /*  */,
@@ -214,7 +219,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Icon(
                                         Icons.star,
@@ -229,14 +234,14 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 15.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 50.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -270,10 +275,10 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                         options: FFButtonOptions(
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
@@ -298,12 +303,12 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 16.0, 0.0, 0.0),
                               child: Column(
                                 children: [
                                   Align(
-                                    alignment: const Alignment(0.0, 0),
+                                    alignment: Alignment(0.0, 0),
                                     child: TabBar(
                                       labelColor: FlutterFlowTheme.of(context)
                                           .primaryText,
@@ -351,7 +356,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 0.0, 15.0, 0.0),
                                           child: SingleChildScrollView(
                                             child: Column(
@@ -366,10 +371,10 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                       MediaQuery.sizeOf(context)
                                                               .height *
                                                           0.53,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 40.0,
                                                                 0.0, 0.0),
                                                     child: FutureBuilder<
@@ -426,7 +431,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                   .length,
                                                           separatorBuilder: (_,
                                                                   __) =>
-                                                              const SizedBox(
+                                                              SizedBox(
                                                                   height: 8.0),
                                                           itemBuilder: (context,
                                                               listViewIndex) {
@@ -438,7 +443,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                               height: 65.0,
                                                               decoration:
                                                                   BoxDecoration(
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0x79E0E3E7),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -447,7 +452,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -511,7 +516,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                           height:
                                                                               100.0,
                                                                           decoration:
-                                                                              const BoxDecoration(),
+                                                                              BoxDecoration(),
                                                                         ),
                                                                         Expanded(
                                                                           child:
@@ -602,7 +607,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                             height:
                                                                                 100.0,
                                                                             decoration:
-                                                                                const BoxDecoration(),
+                                                                                BoxDecoration(),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -621,7 +626,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 15.0)),
                                                                     );
                                                                   },
@@ -640,7 +645,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 0.0, 15.0, 0.0),
                                           child: SingleChildScrollView(
                                             child: Column(
@@ -655,10 +660,10 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                       MediaQuery.sizeOf(context)
                                                               .height *
                                                           0.53,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 40.0,
                                                                 0.0, 0.0),
                                                     child: FutureBuilder<
@@ -719,7 +724,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                   .length,
                                                           separatorBuilder: (_,
                                                                   __) =>
-                                                              const SizedBox(
+                                                              SizedBox(
                                                                   height: 8.0),
                                                           itemBuilder: (context,
                                                               listViewIndex) {
@@ -731,7 +736,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                               height: 65.0,
                                                               decoration:
                                                                   BoxDecoration(
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0x79E0E3E7),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -740,7 +745,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -804,7 +809,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                           height:
                                                                               100.0,
                                                                           decoration:
-                                                                              const BoxDecoration(),
+                                                                              BoxDecoration(),
                                                                         ),
                                                                         Expanded(
                                                                           child:
@@ -890,7 +895,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                             height:
                                                                                 100.0,
                                                                             decoration:
-                                                                                const BoxDecoration(),
+                                                                                BoxDecoration(),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -909,7 +914,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 15.0)),
                                                                     );
                                                                   },
@@ -943,7 +948,7 @@ class _HomePageColetorWidgetState extends State<HomePageColetorWidget>
             wrapWithModel(
               model: _model.navBarColetorModel,
               updateCallback: () => safeSetState(() {}),
-              child: const NavBarColetorWidget(
+              child: NavBarColetorWidget(
                 ativacao: 1,
               ),
             ),

@@ -5,12 +5,16 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'profile_page_coletor_model.dart';
 export 'profile_page_coletor_model.dart';
 
 class ProfilePageColetorWidget extends StatefulWidget {
   const ProfilePageColetorWidget({super.key});
+
+  static String routeName = 'profilePageColetor';
+  static String routePath = '/profilePageColetor';
 
   @override
   State<ProfilePageColetorWidget> createState() =>
@@ -74,19 +78,19 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                   gradient: LinearGradient(
                     colors: [
                       FlutterFlowTheme.of(context).primary,
-                      const Color(0xFFF9CF58)
+                      Color(0xFFF9CF58)
                     ],
-                    stops: const [0.0, 1.0],
-                    begin: const AlignmentDirectional(0.0, -1.0),
-                    end: const AlignmentDirectional(0, 1.0),
+                    stops: [0.0, 1.0],
+                    begin: AlignmentDirectional(0.0, -1.0),
+                    end: AlignmentDirectional(0, 1.0),
                   ),
                 ),
                 child: Stack(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 90.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 90.0, 0.0, 0.0),
                       child: SingleChildScrollView(
                         primary: false,
                         child: Column(
@@ -95,7 +99,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                             Container(
                               width: 900.0,
                               height: 667.0,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -105,7 +109,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                       autovalidateMode:
                                           AutovalidateMode.disabled,
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             15.0, 80.0, 15.0, 0.0),
                                         child: FutureBuilder<List<UsuariosRow>>(
                                           future:
@@ -150,7 +154,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -179,7 +183,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -199,7 +203,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -207,7 +211,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -220,7 +224,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -265,7 +269,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -278,7 +282,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .asValidator(context),
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -307,7 +311,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -325,7 +329,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -333,7 +337,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -346,7 +350,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -391,7 +395,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -409,7 +413,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                       ],
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -438,7 +442,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -456,7 +460,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -464,7 +468,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -477,7 +481,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -522,7 +526,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -535,7 +539,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .asValidator(context),
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -564,7 +568,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -582,7 +586,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -590,7 +594,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -603,7 +607,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -648,7 +652,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -661,7 +665,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .asValidator(context),
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -690,7 +694,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -708,7 +712,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -716,7 +720,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -729,7 +733,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -774,7 +778,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -787,7 +791,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .asValidator(context),
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -816,7 +820,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -834,7 +838,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -842,7 +846,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -855,7 +859,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -900,7 +904,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -913,7 +917,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .asValidator(context),
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -943,7 +947,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -961,7 +965,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -969,7 +973,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -982,7 +986,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -1027,7 +1031,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -1042,7 +1046,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .asValidator(context),
                                                     ),
                                                   ),
-                                                  SizedBox(
+                                                  Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -1071,7 +1075,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1089,7 +1093,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x80182635),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1097,7 +1101,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF041E31),
                                                             width: 1.0,
@@ -1110,7 +1114,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0x00000000),
                                                             width: 1.0,
@@ -1155,7 +1159,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily: 'Inter',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF02090F),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -1170,7 +1174,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 40.0,
                                                                 0.0, 0.0),
                                                     child: Row(
@@ -1190,7 +1194,8 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                 .clearRedirectLocation();
 
                                                             context.goNamedAuth(
-                                                                'loginPage',
+                                                                LoginPageWidget
+                                                                    .routeName,
                                                                 context
                                                                     .mounted);
                                                           },
@@ -1204,14 +1209,14 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                             width: 100.0,
                                                             height: 40.0,
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1304,7 +1309,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                                duration: const Duration(
+                                                                duration: Duration(
                                                                     milliseconds:
                                                                         4000),
                                                                 backgroundColor:
@@ -1324,14 +1329,14 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                             width: 100.0,
                                                             height: 40.0,
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1359,12 +1364,12 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                                                         8.0),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 30.0)),
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    const SizedBox(height: 16.0)),
+                                                    SizedBox(height: 16.0)),
                                               ),
                                             );
                                           },
@@ -1380,23 +1385,23 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, -1.01),
+                      alignment: AlignmentDirectional(0.0, -1.01),
                       child: Container(
                         width: double.infinity,
                         height: 89.0,
-                        decoration: const BoxDecoration(),
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        decoration: BoxDecoration(),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 45.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -1411,7 +1416,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 8.0, 0.0),
                                   child: FlutterFlowIconButton(
                                     borderRadius: 8.0,
@@ -1441,7 +1446,7 @@ class _ProfilePageColetorWidgetState extends State<ProfilePageColetorWidget> {
             wrapWithModel(
               model: _model.navBarColetorModel,
               updateCallback: () => safeSetState(() {}),
-              child: const NavBarColetorWidget(
+              child: NavBarColetorWidget(
                 ativacao: 2,
               ),
             ),

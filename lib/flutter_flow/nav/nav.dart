@@ -6,9 +6,10 @@ import 'package:provider/provider.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
-import '/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -76,38 +77,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const RedirectPageWidget() : const LoginPageWidget(),
+          appStateNotifier.loggedIn ? RedirectPageWidget() : LoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? const RedirectPageWidget()
-              : const LoginPageWidget(),
+              ? RedirectPageWidget()
+              : LoginPageWidget(),
         ),
         FFRoute(
-          name: 'homePage',
-          path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          name: HomePageWidget.routeName,
+          path: HomePageWidget.routePath,
+          builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
-          name: 'loginPage',
-          path: '/loginPage',
-          builder: (context, params) => const LoginPageWidget(),
+          name: LoginPageWidget.routeName,
+          path: LoginPageWidget.routePath,
+          builder: (context, params) => LoginPageWidget(),
         ),
         FFRoute(
-          name: 'profilePage',
-          path: '/profilePage',
-          builder: (context, params) => const ProfilePageWidget(),
+          name: ProfilePageWidget.routeName,
+          path: ProfilePageWidget.routePath,
+          builder: (context, params) => ProfilePageWidget(),
         ),
         FFRoute(
-          name: 'historico',
-          path: '/historico',
-          builder: (context, params) => const HistoricoWidget(),
+          name: HistoricoWidget.routeName,
+          path: HistoricoWidget.routePath,
+          builder: (context, params) => HistoricoWidget(),
         ),
         FFRoute(
-          name: 'homePageColetor',
-          path: '/homePageColetor',
+          name: HomePageColetorWidget.routeName,
+          path: HomePageColetorWidget.routePath,
           builder: (context, params) => HomePageColetorWidget(
             tabIndex: params.getParam(
               'tabIndex',
@@ -116,19 +117,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'historicoColetor',
-          path: '/historicoColetor',
-          builder: (context, params) => const HistoricoColetorWidget(),
+          name: HistoricoColetorWidget.routeName,
+          path: HistoricoColetorWidget.routePath,
+          builder: (context, params) => HistoricoColetorWidget(),
         ),
         FFRoute(
-          name: 'profilePageColetor',
-          path: '/profilePageColetor',
-          builder: (context, params) => const ProfilePageColetorWidget(),
+          name: ProfilePageColetorWidget.routeName,
+          path: ProfilePageColetorWidget.routePath,
+          builder: (context, params) => ProfilePageColetorWidget(),
         ),
         FFRoute(
-          name: 'redirectPage',
-          path: '/redirectPage',
-          builder: (context, params) => const RedirectPageWidget(),
+          name: RedirectPageWidget.routeName,
+          path: RedirectPageWidget.routePath,
+          builder: (context, params) => RedirectPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -247,7 +248,6 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
-    List<String>? collectionNamePath,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -265,7 +265,6 @@ class FFParameters {
       param,
       type,
       isList,
-      collectionNamePath: collectionNamePath,
     );
   }
 }
@@ -366,7 +365,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

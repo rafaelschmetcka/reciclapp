@@ -3,6 +3,7 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -85,11 +86,11 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
             FlutterFlowTheme.of(context).primary,
             FlutterFlowTheme.of(context).secondary
           ],
-          stops: const [0.0, 1.0],
-          begin: const AlignmentDirectional(0.0, -1.0),
-          end: const AlignmentDirectional(0, 1.0),
+          stops: [0.0, 1.0],
+          begin: AlignmentDirectional(0.0, -1.0),
+          end: AlignmentDirectional(0, 1.0),
         ),
-        borderRadius: const BorderRadius.only(
+        borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(20.0),
@@ -97,7 +98,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+        padding: EdgeInsets.all(25.0),
         child: FutureBuilder<List<ColetasRow>>(
           future: ColetasTable().querySingleRow(
             queryFn: (q) => q.eqOrNull(
@@ -131,7 +132,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: 100.0,
                     height: 10.0,
@@ -142,13 +143,13 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             '6u5uugl4' /* Detalhes da coleta */,
@@ -234,7 +235,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                              duration: const Duration(milliseconds: 4000),
+                              duration: Duration(milliseconds: 4000),
                               backgroundColor:
                                   FlutterFlowTheme.of(context).secondary,
                             ),
@@ -244,7 +245,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Expanded(
-                              child: SizedBox(
+                              child: Container(
                                 width: 200.0,
                                 child: TextFormField(
                                   controller:
@@ -284,7 +285,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -347,7 +348,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    duration: const Duration(milliseconds: 4000),
+                                    duration: Duration(milliseconds: 4000),
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).secondary,
                                   ),
@@ -359,7 +360,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                 size: 24.0,
                               ),
                             ),
-                          ].divide(const SizedBox(width: 8.0)),
+                          ].divide(SizedBox(width: 8.0)),
                         ),
                       ),
                       if (columnColetasRow?.status == 'Em Andamento')
@@ -403,7 +404,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Expanded(
-                                  child: SizedBox(
+                                  child: Container(
                                     width: 200.0,
                                     child: TextFormField(
                                       controller:
@@ -443,7 +444,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -489,9 +490,9 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                 ),
                               ],
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
-                    ].divide(const SizedBox(height: 16.0)),
+                    ].divide(SizedBox(height: 16.0)),
                   ),
                 ),
                 if (columnColetasRow?.status == 'Coleta Criada')
@@ -539,19 +540,19 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text('Confirmação de Coleta'),
-                                    content: const Text(
+                                    title: Text('Confirmação de Coleta'),
+                                    content: Text(
                                         'Deseja realmente confirmar essa coleta?'),
                                     actions: [
                                       TextButton(
                                         onPressed: () => Navigator.pop(
                                             alertDialogContext, false),
-                                        child: const Text('Cancelar'),
+                                        child: Text('Cancelar'),
                                       ),
                                       TextButton(
                                         onPressed: () => Navigator.pop(
                                             alertDialogContext, true),
-                                        child: const Text('Confirmar'),
+                                        child: Text('Confirmar'),
                                       ),
                                     ],
                                   );
@@ -587,7 +588,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                           }
 
                           context.pushNamed(
-                            'homePageColetor',
+                            HomePageColetorWidget.routeName,
                             queryParameters: {
                               'tabIndex': serializeParam(
                                 0,
@@ -609,7 +610,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                              duration: const Duration(milliseconds: 4000),
+                              duration: Duration(milliseconds: 4000),
                               backgroundColor:
                                   FlutterFlowTheme.of(context).secondary,
                             ),
@@ -620,9 +621,9 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                         ),
                         options: FFButtonOptions(
                           height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -652,19 +653,19 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text('Confirmação de Coleta'),
-                                    content: const Text(
+                                    title: Text('Confirmação de Coleta'),
+                                    content: Text(
                                         'Confirma que a coleta foi concluída?'),
                                     actions: [
                                       TextButton(
                                         onPressed: () => Navigator.pop(
                                             alertDialogContext, false),
-                                        child: const Text('Cancelar'),
+                                        child: Text('Cancelar'),
                                       ),
                                       TextButton(
                                         onPressed: () => Navigator.pop(
                                             alertDialogContext, true),
-                                        child: const Text('Confirmar'),
+                                        child: Text('Confirmar'),
                                       ),
                                     ],
                                   );
@@ -709,7 +710,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                           }
 
                           context.pushNamed(
-                            'homePageColetor',
+                            HomePageColetorWidget.routeName,
                             queryParameters: {
                               'tabIndex': serializeParam(
                                 1,
@@ -731,7 +732,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                              duration: const Duration(milliseconds: 4000),
+                              duration: Duration(milliseconds: 4000),
                               backgroundColor:
                                   FlutterFlowTheme.of(context).secondary,
                             ),
@@ -742,9 +743,9 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                         ),
                         options: FFButtonOptions(
                           height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -759,7 +760,7 @@ class _AceitarColetaWidgetState extends State<AceitarColetaWidget> {
                       ),
                     ],
                   ),
-              ].divide(const SizedBox(height: 16.0)),
+              ].divide(SizedBox(height: 16.0)),
             );
           },
         ),

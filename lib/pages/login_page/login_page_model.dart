@@ -1,7 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'login_page_widget.dart' show LoginPageWidget;
 import 'package:flutter/material.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class LoginPageModel extends FlutterFlowModel<LoginPageWidget> {
   ///  State fields for stateful widgets in this page.
@@ -75,6 +77,21 @@ class LoginPageModel extends FlutterFlowModel<LoginPageWidget> {
     return null;
   }
 
+  // State field(s) for cadCpf widget.
+  FocusNode? cadCpfFocusNode;
+  TextEditingController? cadCpfTextController;
+  final cadCpfMask = MaskTextInputFormatter(mask: '###.###.###-##');
+  String? Function(BuildContext, String?)? cadCpfTextControllerValidator;
+  String? _cadCpfTextControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '7hrzq4ty' /* Insira o CPF */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for cadPassword widget.
   FocusNode? cadPasswordFocusNode;
   TextEditingController? cadPasswordTextController;
@@ -119,6 +136,7 @@ class LoginPageModel extends FlutterFlowModel<LoginPageWidget> {
     tfSenhaTextControllerValidator = _tfSenhaTextControllerValidator;
     cadNameTextControllerValidator = _cadNameTextControllerValidator;
     cadEmailTextControllerValidator = _cadEmailTextControllerValidator;
+    cadCpfTextControllerValidator = _cadCpfTextControllerValidator;
     cadPasswordVisibility = false;
     cadPasswordTextControllerValidator = _cadPasswordTextControllerValidator;
     cadConfPasswordVisibility = false;
@@ -140,6 +158,9 @@ class LoginPageModel extends FlutterFlowModel<LoginPageWidget> {
 
     cadEmailFocusNode?.dispose();
     cadEmailTextController?.dispose();
+
+    cadCpfFocusNode?.dispose();
+    cadCpfTextController?.dispose();
 
     cadPasswordFocusNode?.dispose();
     cadPasswordTextController?.dispose();

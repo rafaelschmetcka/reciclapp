@@ -1,5 +1,6 @@
 import '/components/nav_bar_coletor_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'profile_page_coletor_widget.dart' show ProfilePageColetorWidget;
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';

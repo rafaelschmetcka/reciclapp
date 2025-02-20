@@ -1,6 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/components/nav_bar_coletor_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'dart:async';
 import 'home_page_coletor_widget.dart' show HomePageColetorWidget;
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class HomePageColetorModel extends FlutterFlowModel<HomePageColetorWidget> {
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(const Duration(milliseconds: 50));
+      await Future.delayed(Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter2?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
@@ -55,7 +56,7 @@ class HomePageColetorModel extends FlutterFlowModel<HomePageColetorWidget> {
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(const Duration(milliseconds: 50));
+      await Future.delayed(Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter1?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {

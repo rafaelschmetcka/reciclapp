@@ -9,7 +9,7 @@ class UsuariosTable extends SupabaseTable<UsuariosRow> {
 }
 
 class UsuariosRow extends SupabaseDataRow {
-  UsuariosRow(super.data);
+  UsuariosRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => UsuariosTable();
@@ -52,4 +52,7 @@ class UsuariosRow extends SupabaseDataRow {
 
   String? get complemento => getField<String>('complemento');
   set complemento(String? value) => setField<String>('complemento', value);
+
+  String? get cpf => getField<String>('cpf');
+  set cpf(String? value) => setField<String>('cpf', value);
 }

@@ -1,5 +1,6 @@
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'redirect_page_widget.dart' show RedirectPageWidget;
 import 'package:flutter/material.dart';
 

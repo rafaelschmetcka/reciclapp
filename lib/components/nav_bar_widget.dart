@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'nav_bar_model.dart';
@@ -12,7 +13,7 @@ class NavBarWidget extends StatefulWidget {
   const NavBarWidget({
     super.key,
     int? ativacao,
-  }) : ativacao = ativacao ?? 1;
+  }) : this.ativacao = ativacao ?? 1;
 
   final int ativacao;
 
@@ -46,8 +47,8 @@ class _NavBarWidgetState extends State<NavBarWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(2.0, 2.0),
+            begin: Offset(1.0, 1.0),
+            end: Offset(2.0, 2.0),
           ),
         ],
       ),
@@ -59,8 +60,8 @@ class _NavBarWidgetState extends State<NavBarWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(2.0, 2.0),
+            begin: Offset(1.0, 1.0),
+            end: Offset(2.0, 2.0),
           ),
         ],
       ),
@@ -72,8 +73,8 @@ class _NavBarWidgetState extends State<NavBarWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(2.0, 2.0),
+            begin: Offset(1.0, 1.0),
+            end: Offset(2.0, 2.0),
           ),
         ],
       ),
@@ -97,17 +98,17 @@ class _NavBarWidgetState extends State<NavBarWidget>
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 100.0,
       child: Stack(
-        alignment: const AlignmentDirectional(0.0, 1.0),
+        alignment: AlignmentDirectional(0.0, 1.0),
         children: [
           Container(
             width: double.infinity,
             height: 70.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primary,
-              borderRadius: const BorderRadius.only(
+              borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(0.0),
                 bottomRight: Radius.circular(0.0),
                 topLeft: Radius.circular(20.0),
@@ -115,7 +116,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(30.0, 8.0, 30.0, 8.0),
+              padding: EdgeInsetsDirectional.fromSTEB(30.0, 8.0, 30.0, 8.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -141,13 +142,13 @@ class _NavBarWidgetState extends State<NavBarWidget>
                                     .reverse);
                           }
 
-                          context.goNamed('homePage');
+                          context.goNamed(HomePageWidget.routeName);
                         },
                         child: Icon(
                           Icons.home_outlined,
                           color: widget.ativacao == 1
                               ? FlutterFlowTheme.of(context).secondary
-                              : const Color(0xFF02090F),
+                              : Color(0xFF02090F),
                           size: 50.0,
                         ),
                       ).animateOnActionTrigger(
@@ -158,7 +159,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                   Container(
                     width: 60.0,
                     height: double.infinity,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                   ),
                   Column(
                     mainAxisSize: MainAxisSize.max,
@@ -181,7 +182,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                                     .reverse);
                           }
 
-                          context.goNamed('profilePage');
+                          context.goNamed(ProfilePageWidget.routeName);
                         },
                         child: Icon(
                           Icons.person_outline,
@@ -189,9 +190,9 @@ class _NavBarWidgetState extends State<NavBarWidget>
                             if (widget.ativacao == 2) {
                               return FlutterFlowTheme.of(context).secondary;
                             } else if (widget.ativacao == 0) {
-                              return const Color(0xFF02090F);
+                              return Color(0xFF02090F);
                             } else {
-                              return const Color(0xFF02090F);
+                              return Color(0xFF02090F);
                             }
                           }(),
                           size: 50.0,
@@ -210,12 +211,12 @@ class _NavBarWidgetState extends State<NavBarWidget>
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                 child: FlutterFlowIconButton(
                   borderRadius: 100.0,
                   buttonSize: 60.0,
                   fillColor: FlutterFlowTheme.of(context).success,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.add,
                     color: Color(0xFF02090F),
                     size: 35.0,
@@ -238,7 +239,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                       builder: (context) {
                         return Padding(
                           padding: MediaQuery.viewInsetsOf(context),
-                          child: const AdicionarColetaWidget(),
+                          child: AdicionarColetaWidget(),
                         );
                       },
                     ).then((value) => safeSetState(() {}));

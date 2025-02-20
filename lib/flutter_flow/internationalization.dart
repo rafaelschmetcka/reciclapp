@@ -253,6 +253,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Digite Seu Email',
       'en': '',
     },
+    'q1cuec24': {
+      'pt': 'CPF',
+      'en': '',
+    },
+    '1qyg7nyo': {
+      'pt': 'Digite Seu CPF',
+      'en': '',
+    },
     't5ngsfry': {
       'pt': 'Senha',
       'en': '',
@@ -310,6 +318,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '7jje80nu': {
+      'pt': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '7hrzq4ty': {
+      'pt': 'Insira o CPF',
+      'en': '',
+    },
+    'j5ig4ksi': {
       'pt': 'Please choose an option from the dropdown',
       'en': '',
     },

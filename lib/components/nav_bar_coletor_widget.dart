@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'nav_bar_coletor_model.dart';
@@ -10,7 +11,7 @@ class NavBarColetorWidget extends StatefulWidget {
   const NavBarColetorWidget({
     super.key,
     int? ativacao,
-  }) : ativacao = ativacao ?? 1;
+  }) : this.ativacao = ativacao ?? 1;
 
   final int ativacao;
 
@@ -44,8 +45,8 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(2.0, 2.0),
+            begin: Offset(1.0, 1.0),
+            end: Offset(2.0, 2.0),
           ),
         ],
       ),
@@ -57,8 +58,8 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(1.0, 1.0),
-            end: const Offset(2.0, 2.0),
+            begin: Offset(1.0, 1.0),
+            end: Offset(2.0, 2.0),
           ),
         ],
       ),
@@ -82,17 +83,17 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 100.0,
       child: Stack(
-        alignment: const AlignmentDirectional(0.0, 1.0),
+        alignment: AlignmentDirectional(0.0, 1.0),
         children: [
           Container(
             width: double.infinity,
             height: 70.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primary,
-              borderRadius: const BorderRadius.only(
+              borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(0.0),
                 bottomRight: Radius.circular(0.0),
                 topLeft: Radius.circular(20.0),
@@ -100,7 +101,7 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(30.0, 8.0, 30.0, 8.0),
+              padding: EdgeInsetsDirectional.fromSTEB(30.0, 8.0, 30.0, 8.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -127,7 +128,7 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
                           }
 
                           context.goNamed(
-                            'homePageColetor',
+                            HomePageColetorWidget.routeName,
                             queryParameters: {
                               'tabIndex': serializeParam(
                                 0,
@@ -140,7 +141,7 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
                           Icons.home_outlined,
                           color: widget.ativacao == 1
                               ? FlutterFlowTheme.of(context).secondary
-                              : const Color(0xFF02090F),
+                              : Color(0xFF02090F),
                           size: 50.0,
                         ),
                       ).animateOnActionTrigger(
@@ -169,7 +170,7 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
                                     .reverse);
                           }
 
-                          context.goNamed('profilePageColetor');
+                          context.goNamed(ProfilePageColetorWidget.routeName);
                         },
                         child: Icon(
                           Icons.person_outline,
@@ -177,9 +178,9 @@ class _NavBarColetorWidgetState extends State<NavBarColetorWidget>
                             if (widget.ativacao == 2) {
                               return FlutterFlowTheme.of(context).secondary;
                             } else if (widget.ativacao == 0) {
-                              return const Color(0xFF02090F);
+                              return Color(0xFF02090F);
                             } else {
-                              return const Color(0xFF02090F);
+                              return Color(0xFF02090F);
                             }
                           }(),
                           size: 50.0,

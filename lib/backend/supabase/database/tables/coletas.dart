@@ -9,7 +9,7 @@ class ColetasTable extends SupabaseTable<ColetasRow> {
 }
 
 class ColetasRow extends SupabaseDataRow {
-  ColetasRow(super.data);
+  ColetasRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => ColetasTable();
@@ -26,9 +26,6 @@ class ColetasRow extends SupabaseDataRow {
   String? get coletorId => getField<String>('coletor_id');
   set coletorId(String? value) => setField<String>('coletor_id', value);
 
-  DateTime? get dataColeta => getField<DateTime>('data_coleta');
-  set dataColeta(DateTime? value) => setField<DateTime>('data_coleta', value);
-
   String? get descricao => getField<String>('descricao');
   set descricao(String? value) => setField<String>('descricao', value);
 
@@ -41,7 +38,6 @@ class ColetasRow extends SupabaseDataRow {
   int? get avaliacaoUsuario => getField<int>('avaliacao_usuario');
   set avaliacaoUsuario(int? value) => setField<int>('avaliacao_usuario', value);
 
-  DateTime? get dataConclusao => getField<DateTime>('data_conclusao');
-  set dataConclusao(DateTime? value) =>
-      setField<DateTime>('data_conclusao', value);
+  DateTime? get dataColeta => getField<DateTime>('data_coleta');
+  set dataColeta(DateTime? value) => setField<DateTime>('data_coleta', value);
 }
