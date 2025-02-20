@@ -92,6 +92,7 @@ _________________
     - `rua (text)` - Rua da coleta.
     - `numero (Integer)` - Número da residência.
     - `complemento (text)` - Complemento.
+    - `cpf (varchar)` - CPF do usuário.
 
 ## Tabela `Coletas`
 
