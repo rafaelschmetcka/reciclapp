@@ -124,13 +124,6 @@ _________________
 - Supabase como backend, banco de dados e autenticação.
 - Dart como linguagem principal no FlutterFlow.
 
-## Instalaçãi
-
-- Clone este repositório do GitHub.
-- Configure o Supabase com políticas de acesso e as tabelas mencionadas.
-- Importe o projeto no FlutterFlow.
-- Faça o deploy do aplicativo para testes e conexão da base via API.
-
 ## Instruções para Instalar o Projeto
 
 Este projeto foi criado no **FlutterFlow** e pode ser rodado no **Android Studio**. 
